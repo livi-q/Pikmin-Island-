@@ -2,12 +2,39 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: black;
+    overflow: hidden;
 } 
 
 button{
+    background: #fff2f27c;
 
-    background: #fff2f29c;
+    border-radius: 50vh;
+    border-width: 0;
 
-    border-radius: 5%;
+    font-family: 'pikmin';
+    font-size: 15vh;
+}
 
+.container{
+    z-index: 6;
+
+    gap: 100px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    right: 60%;
+    top:75%;
+}
+
+.BgImg{
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    width: 70%;
 }
