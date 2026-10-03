@@ -10,21 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pikmin/pikmin.ttf">
     
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="cutscene.css">
 </head>
 <body>
     <div class="load"id = "load"></div>
 
-    <img class= "BgImg" src="bgs/home.webp">
+    <img class= "BgImg" src="../bgs/home.webp">
+    <div class="dialogue" id = 'dialogue'>
+        <div class="viewBox">
+            <p class="dialogueText">You wake up as a <span style="font-weight: bolder; color: brown;"> red </span> pikmin... </p>
+            <button class="next" id="next">Next</button>  
+        </div>
+        
+    </div>
 
-    <div class="container" >
-        <a href="cutscenes/cutscene1.html"><button> Start Game</button></a>
-         
-        <button> View Map </button>
-    </div>    
-
-    <p>Noelle Cheng, Ella Jiang, Serena Li, Olivia Lu, Mira Wong</p>
-
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
+    <script src="cutjs/cutscene1.js"></script>
 </body>
 </html>

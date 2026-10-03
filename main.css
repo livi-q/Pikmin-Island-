@@ -1,40 +1,104 @@
 body{
     margin: 0;
     padding: 0;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     background: black;
     overflow: hidden;
+    font-family: 'Quicksand';
 } 
 
 button{
-    background: #fff2f27c;
+    background: radial-gradient(circle, rgba(209, 202, 182, 0.568), rgba(209, 202, 182, 0.075));
+    backdrop-filter: blur(1px); 
+    transition: background 1s ease-in-out;
 
-    border-radius: 50vh;
-    border-width: 0;
+    height: fit-content;
+    width: fit-content;
+    white-space: nowrap;
+    padding: 15px 50px;
 
-    font-family: 'pikmin';
-    font-size: 15vh;
+    border-radius: 9999px;
+    border-width: 5px;
+    border-color: rgba(245, 245, 245, 0.4);
+
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 10vh;
+    color: whitesmoke;
+
+    cursor: pointer;
 }
-
+button:hover {
+    background: rgba(255, 220, 122, 0.623)
+    /* background: radial-gradient(circle, rgba(255, 225, 141, 0.712), rgba(255, 225, 141, 0.205)); */
+}
 .container{
     z-index: 6;
 
-    gap: 100px;
-    align-self: center;
+    width: 70vw;
+    height:auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
     justify-content: center;
     align-items: center;
+    place-items: center;
 
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    bottom: 200px;           
+    left: 50%;             
+    transform: translateX(-50%);
 
-    position: absolute;
-    right: 60%;
-    top:75%;
 }
 
 .BgImg{
-    z-index: 0;
-    margin: 0;
+    z-index: 0; 
+
     padding: 0;
-    width: 70%;
+    display: block;
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 70vw;
+    height:100%;
+    object-fit:cover;
+}
+
+p{
+    z-index: 10;
+
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: rgba(61, 26, 15, 0.712);
+
+    text-align: center;
+    justify-content: center;
+
+    position: relative;
+    bottom: 30vh;   
+    display: block;        
+    left: 50%;             
+    transform: translateX(-50%);
+}
+
+
+/*THIS IS WHERE THE EXCESSIVE WHITE SCREEN THING GOES*/
+.load{
+    background: white;
+    visibility: visible;
+    transition:  opacity 1.5s ease-out, visibility 1.5s ease-in-out;
+
+    height: 100vh;
+    width: 100vw;
+
+    z-index: 99;
+    position: fixed;
+}
+.loaded {
+    opacity: 0;
+    visibility: hidden;
 }
