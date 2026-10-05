@@ -33,6 +33,7 @@ document.addEventListener('click', function(justDie) {
 
             const out = document.createElement('div');
             out.classList.add('dialogue');
+            out.id="dialogue"
 
             out.innerHTML=`<div class="viewBox">
                                 <p class="dialogueText">${NextText[i]}</p>
