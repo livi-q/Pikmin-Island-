@@ -64,8 +64,11 @@
     font-weight: bold;
     font-size: 2vw;
 
-    top: 0px;
+    position:absolute;
+    top: 1px;
     right: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     flex-grow: 1;
 
     width: 100%;
