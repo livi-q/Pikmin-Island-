@@ -28,7 +28,9 @@
     width: 50vw;
     min-width: 0; 
     height: fit-content;
-    min-height: 50px;
+    min-height: 75px;
+
+    padding: 5vh;
     
     z-index: 4;
     position: absolute;
