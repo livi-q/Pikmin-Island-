@@ -22,15 +22,14 @@
 
 .viewBox{
     display: flex;
-    flex:1;
-    padding:3%;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 3vh 3vw 3vw;
 
     width: 50vw;
     min-width: 0; 
     height: fit-content;
     min-height: 75px;
-
-    padding: 5vh;
     
     z-index: 4;
     position: absolute;
