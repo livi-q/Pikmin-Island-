@@ -2,7 +2,9 @@ const nextButtons = document.querySelectorAll("next");
 const NextText= [
     "Hi Y/n",
     "welcome to the island.",
-    "more specifically jalph love island owned by the chuds of the green aura and flies"
+    "more specifically jalph love island owned by the chuds of the green aura and flies",
+    "text text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttext",
+    "text text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttexttext text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttext"
 ]
 
 let i = 0
