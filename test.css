@@ -7,13 +7,12 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-basis: content;
-  
 
   width: 50vw;
-  height: auto;                
+  height: fit-content;                
   min-height: 0;
   box-sizing: border-box;
-  padding: 3vh;  
+  padding: 3vh 5vw ;  
   position: absolute;
   top: 50%;                   
   left: 50%;             
@@ -23,7 +22,15 @@
   border: 5px solid rgba(245, 245, 245, 0.4);
 
   background: radial-gradient(circle, rgba(209, 202, 182, 0.603), rgba(209, 202, 182, 0.212));
-  backdrop-filter: blur(1px); 
+  backdrop-filter: blur(1px);
+  
+    color: rgb(61, 26, 15);
+    font-weight: bold;
+    font-size: 2vw;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+    line-height: 1.2;
+    text-align: center;
 }
 
 .next, .done{
@@ -35,23 +42,4 @@
     position: absolute;
     bottom: 3%;
     right: 3%;
-}
-
-.dialogueText{
-    color: rgb(61, 26, 15);
-    font-weight: bold;
-    font-size: 2vw;
-
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;  
-    align-self: flex-start;          
-
-    overflow-wrap: break-word; 
-    word-break: break-word;
-    line-height: 1.2;
-    text-align: center;
-    
-    flex-shrink: 0;
 }

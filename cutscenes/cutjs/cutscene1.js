@@ -25,7 +25,7 @@ document.addEventListener('click', function(justDie) {
                 out.id="dialogue"
 
                 out.innerHTML=`<div class="viewBox">
-                                    <p class="dialogueText">${NextText[i]}</p>
+                                    ${NextText[i]}
                                     <button class="next" id="next">Next</button>  
                                 </div>`
 
@@ -38,7 +38,7 @@ document.addEventListener('click', function(justDie) {
             out.id="dialogue"
 
             out.innerHTML=`<div class="viewBox">
-                                <p class="dialogueText">${NextText[i]}</p>
+                                ${NextText[i]}
                                 <button class="done" id="done">Done</button>  
                             </div>`
 
