@@ -58,5 +58,18 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
+        
+        const choice = document.createElement('div')
+        choice.classList.add('choice');
+        choice.id="choice"
+
+        choice.innerHTML=`        
+        <button> A </button>
+        <button> B </button>
+
+        <div class="description"> Go to forest </div>
+        <div class="description"> Go to beach </div>`
+
+        document.body.appendChild(choice);
     }
 });
