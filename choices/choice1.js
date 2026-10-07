@@ -1,9 +1,9 @@
 const nextButtons = document.querySelectorAll("next");
 pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Garden.mp3');
+bgm =new Audio('../sfx/cutscene.mp3');
 bgm.currentTime = 0;
-// bgm.play();
+bgm.play();
 bgm.volume = 0.5;
 
 const NextText= [
@@ -64,19 +64,14 @@ document.addEventListener('click', function(justDie) {
         choice.id="choice"
 
         choice.innerHTML=`        
-        <button id= a > A </button>
-        <button id = b > B </button>
+        <a href="../cutscenes/1forest.html"><button id= a > A </button></a>
+        <a href="../cutscenes/1beach.html"><button id = b > B </button></a>
 
-        <a href="../cutscenes/1forest.html"><div class="description" > Go to forest </div></a>
-        <a href="../cutscenes/1beach.html"><div class="description"> Go to beach </div></a>`
+        <div class="description" > Go to forest </div>
+        <div class="description"> Go to beach </div>`
 
         document.body.appendChild(choice);
         console.log(choice)
     }
 });
 
-document.addEventListener('click', function(justDie) {
-    const A = justDie.target.closest('a')
-    const B = justDie.target.closest('b')
-    
-});
