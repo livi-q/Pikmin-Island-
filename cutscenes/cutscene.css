@@ -28,7 +28,7 @@
     height: fit-content;
     min-height: 120px;
     box-sizing: border-box;
-    padding: 3vh 5vw ;  
+    padding: 3vh 5vh 5vw ;  
     
     z-index: 4;
     position: absolute;

@@ -28,7 +28,7 @@
     height: fit-content;
     min-height: 120px;
     box-sizing: border-box;
-    padding: 3vh 5vw ;  
+    padding: 3vh 4vh 5vw ;  
     
     z-index: 4;
     position: absolute;
@@ -82,6 +82,12 @@
   margin-left: auto;
   margin-right: auto;
 
+  z-index: 5;
+  position: absolute;
+  bottom: 5vh;  
+  transform: translateY(+50%);         
+  left: 50%;             
+  transform: translateX(-50%);
 }
 .description{
     height: fit-content;                
@@ -101,4 +107,8 @@
     word-break: break-word;
     line-height: 1.2;
     text-align: center;
+}
+
+button{
+  transition: background .2s ease-in-out;
 }

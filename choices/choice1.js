@@ -58,18 +58,25 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        
+
         const choice = document.createElement('div')
         choice.classList.add('choice');
         choice.id="choice"
 
         choice.innerHTML=`        
-        <button> A </button>
-        <button> B </button>
+        <button id= a > A </button>
+        <button id = b > B </button>
 
-        <div class="description"> Go to forest </div>
+        <div class="description" > Go to forest </div>
         <div class="description"> Go to beach </div>`
 
         document.body.appendChild(choice);
+        console.log(choice)
     }
+});
+
+document.addEventListener('click', function(justDie) {
+    const A = justDie.target.closest('a')
+    const B = justDie.target.closest('b')
+    
 });
