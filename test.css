@@ -43,3 +43,38 @@
     bottom: 3%;
     right: 3%;
 }
+
+
+/* BUTTONS CHOICE DEVEOPLEMTN  */
+.choice{
+  display: grid;
+  grid-template-columns: auto auto;
+
+  justify-content: center;
+  align-items:center;
+  place-items: center;
+  gap: 25vw;
+
+  height: 50vh;
+  width: 70vw;
+
+}
+.description{
+    height: fit-content;                
+    box-sizing: border-box;
+    padding: 3vh 5vw ;  
+
+    border-radius: 40px;
+    border: 5px solid rgba(245, 245, 245, 0.4);
+
+    background: radial-gradient(circle, rgba(209, 202, 182, 0.603), rgba(209, 202, 182, 0.212));
+    backdrop-filter: blur(1px);
+  
+    color: rgb(61, 26, 15);
+    font-weight: bold;
+    font-size: 2vw;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+    line-height: 1.2;
+    text-align: center;
+}

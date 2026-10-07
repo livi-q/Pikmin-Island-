@@ -9,7 +9,7 @@ bgm.volume = 0.5;
 const NextText= [
     "Welcome to the island.",
     "Your job is to collect food for your colony!",
-    "Work together with other pikmin to explore and collect food",
+    "Work together with other pikmin to explore and collect food.",
     "Remember, don't stay out too late!",
 ]
 
