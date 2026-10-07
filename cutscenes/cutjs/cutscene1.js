@@ -1,10 +1,17 @@
 const nextButtons = document.querySelectorAll("next");
+pop = new Audio('../sfx/pop.mp3')
+
+bgm =new Audio('../sfx/Garden.mp3');
+bgm.play();
+bgm.volume = 0.5;
+
 const NextText= [
     "Hi Y/n",
     "welcome to the island.",
     "more specifically jalph love island owned by the chuds of the green aura and flies",
     "text text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttext",
-    "text text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttexttext text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttext"
+    "text text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttexttext text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttext",
+    "justice for piggy and simon"
 ]
 
 let i = 0
@@ -17,6 +24,7 @@ document.addEventListener('click', function(justDie) {
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
         console.log(i)
+        pop.play();
 
         if (i < NextText.length-1) {
 
