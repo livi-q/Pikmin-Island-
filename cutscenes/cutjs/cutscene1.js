@@ -7,12 +7,10 @@ bgm.currentTime = 0;
 bgm.volume = 0.5;
 
 const NextText= [
-    "Hi Y/n",
-    "welcome to the island.",
-    "more specifically jalph love island owned by the chuds of the green aura and flies",
-    "text text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttext",
-    "text text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttexttext text text texttexttexttexttexttexttext texttexttexttexttexttexttexttext texttexttext text texttexttexttext texttext texttext",
-    "justice for piggy and simon"
+    "Welcome to the island.",
+    "Your job is to collect food for your colony!",
+    "Work together with other pikmin to explore and collect food",
+    "Remember, don't stay out too late!",
 ]
 
 let i = 0
@@ -60,6 +58,8 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
+        setTimeout(2000);
+        window.location.href = "../choices/choice1.html"
     }
 });
 
