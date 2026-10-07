@@ -67,8 +67,8 @@ document.addEventListener('click', function(justDie) {
         <button id= a > A </button>
         <button id = b > B </button>
 
-        <div class="description" > Go to forest </div>
-        <div class="description"> Go to beach </div>`
+        <a href="../cutscenes/1forest.html"><div class="description" > Go to forest </div></a>
+        <a href="../cutscenes/1beach.html"><div class="description"> Go to beach </div></a>`
 
         document.body.appendChild(choice);
         console.log(choice)
