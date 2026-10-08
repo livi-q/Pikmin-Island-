@@ -6,9 +6,9 @@ bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 1;
 
-const pikmin = new Audio('../sfx/drown1.mp3');
-pikmin.loop=true;
-pikmin.play();
+const pikmin = new Audio('../sfx/pikmin.mp3');
+
+
 
 const NextText= [
     "",
@@ -29,6 +29,7 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
+        pikmin.play();
 
         if (i < NextText.length-1) {
 
@@ -36,7 +37,7 @@ document.addEventListener('click', function(justDie) {
                 out.classList.add('dialogue');
                 out.id="dialogue"
 
-                out.innerHTML=`<div class="viewBox" style = 'color: red;'>
+                out.innerHTML=`<div class="viewBox">
                                     ${NextText[i]}
                                     <button class="next" id="next">Next</button>  
                                 </div>`
@@ -49,7 +50,7 @@ document.addEventListener('click', function(justDie) {
             out.classList.add('dialogue');
             out.id="dialogue"
 
-            out.innerHTML=`<div class="viewBox" style = 'color: red;'>
+            out.innerHTML=`<div class="viewBox" style = 'color: rbg(158, 82, 0);'>
                                 ${NextText[i]}
                                 <button class="done" id="done">Done</button>  
                             </div>`
@@ -67,7 +68,7 @@ document.addEventListener('click', function(justDie) {
         const die = document.createElement('div')
         die.classList.add('die');
         die.id="die";
-        die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
+        die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">Good job! \n [Play Again?]</a>`
         document.body.appendChild(die);
         pikmin.pause();
     }
