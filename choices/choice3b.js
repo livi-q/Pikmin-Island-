@@ -1,19 +1,19 @@
 const nextButtons = document.querySelectorAll("next");
-pop = new Audio('../sfx/pop.mp3')
+const pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Garden.mp3');
+const bgm =new Audio('../sfx/cutscene.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
 
-pikmin = new Audio('../sfx/pikmin.mp3');
+let pikmin = new Audio('../sfx/lookie.mp3');
 
 const NextText= [
     "",
-    "The water trickled softly, a comforting sound for your little ears.",
-    "You jumped from a grey, olden rock, landing onto a another solid one surrounded by the eddying river water.",
-    "Up ahead, a dark cavern yawns, water flowing into its mouth.",
-
+    "They wonder what's in that mysterious cave...",
+    "Suddenly, something shimmery in the water catches your eye.",
+    "Perhaps it could be useful?",
+    "What do you do?"
 ]
 
 let i = 0
@@ -27,6 +27,7 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
+        pikmin.play();
 
         if (i < NextText.length-1) {
 
@@ -40,6 +41,7 @@ document.addEventListener('click', function(justDie) {
                                 </div>`
 
                 document.body.appendChild(out);
+                
 
         } else {
 
@@ -61,6 +63,22 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        setTimeout(()=>{window.location.href = "../choices/choice3b.js"},2000);
+
+        const choice = document.createElement('div')
+        choice.classList.add('anim');
+        choice.id="anim"
+
+        choice.innerHTML=`   
+        <div class="choice" id = "choice">     
+            <a href="../cutscenes/#.html"><button id= a > A </button></a>
+            <a href="../cutscenes/endingDrown.html"><button id = b > B </button></a>
+
+            <div class="description" > Explore cave </div>
+            <div class="description"> Try to collect object </div>
+        </div>`
+
+        document.body.appendChild(choice);
+        console.log(choice)
     }
 });
+
