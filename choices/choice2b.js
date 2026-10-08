@@ -6,13 +6,14 @@ bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
 
-let pikmin = new Audio('../sfx/pikmin.mp3');
+let pikmin = new Audio('../sfx/lookie.mp3');
 
 const NextText= [
     "",
-    "They seem to be asking you something.",
-    "The pikmin are inviting you to collect food with them!",
-    "Where do you want to go?"
+    "The pikmin found food!! They could use your help.",
+    "But- wait-",
+    "Your friend thinks they see something in the water...",
+    "What do you do?"
 ]
 
 let i = 0
@@ -69,11 +70,11 @@ document.addEventListener('click', function(justDie) {
 
         choice.innerHTML=`   
         <div class="choice" id = "choice">     
-            <a href="../cutscenes/1forest.html"><button id= a > A </button></a>
-            <a href="../cutscenes/1beach.html"><button id = b > B </button></a>
+            <a href="../cutscenes/#.html"><button id= a > A </button></a>
+            <a href="../cutscenes/#.html"><button id = b > B </button></a>
 
-            <div class="description" > Go to forest </div>
-            <div class="description"> Go to beach </div>
+            <div class="description" > Go to water </div>
+            <div class="description"> Help with food </div>
         </div>`
 
         document.body.appendChild(choice);

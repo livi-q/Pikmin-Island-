@@ -1,16 +1,19 @@
 const nextButtons = document.querySelectorAll("next");
 pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Default.mp3');
+bgm =new Audio('../sfx/Tropical.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
 
+pikmin = new Audio('../sfx/pikmin.mp3');
+
 const NextText= [
-    "Welcome to the island.",
-    "Your job is to collect food for your colony!",
-    "Work together with other pikmin to explore and collect food.",
-    "Remember, don't stay out too late!",
+    "The sun slowly climbs higher in the sky, scorching the white sands with its radiant beams.",
+    "Around you, the tide pulls back, unveiling the ocean’s trinkets.",
+    "You scurry down with your friends, excited to see what the shore has to offer.",
+    "As you try on your new wardrobe, you hear the surf rolling back in and hurry back up the sand.",
+    "If only you had gills like your Blue Pikmin friends!"
 ]
 
 let i = 0
@@ -45,7 +48,7 @@ document.addEventListener('click', function(justDie) {
             out.id="dialogue"
 
             out.innerHTML=`<div class="viewBox">
-                                ${NextText[i]}
+                                If only you had gills like your <span style = "color: rgb(65, 113, 202)">Blue Pikmin</span> friends!
                                 <button class="done" id="done">Done</button>  
                             </div>`
 
@@ -58,7 +61,7 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        setTimeout(()=>{window.location.href = "../choices/choice1.html"},3000);
+        setTimeout(()=>{window.location.href = "../choices/choice2b.html"},3000);
         
     }
 });

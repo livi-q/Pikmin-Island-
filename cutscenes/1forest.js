@@ -1,16 +1,19 @@
 const nextButtons = document.querySelectorAll("next");
 pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Default.mp3');
+bgm =new Audio('../sfx/Garden.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
 
+pikmin = new Audio('../sfx/pikmin.mp3');
+
 const NextText= [
-    "Welcome to the island.",
-    "Your job is to collect food for your colony!",
-    "Work together with other pikmin to explore and collect food.",
-    "Remember, don't stay out too late!",
+    "You venture into the lush and vibrant forest, careful not to trip over the pebbles scattered across the forest floor.",
+    "The dirt grinds against the soles of your tiny red feet, the giant oak trees looming over you.",
+    "Sunlight peeks through the small gaps in the canopy of leaves, enough to shine a path in the forest.",
+    "To your right, you heard the rapid rush of water, followed by what sounds like the squeaks of your pikmin friends.",
+    "On the left, the bright jewel-like fruits that dot low bushes catch your eye.",
 ]
 
 let i = 0
@@ -58,8 +61,6 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        setTimeout(()=>{window.location.href = "../choices/choice1.html"},3000);
-        
     }
 });
 
