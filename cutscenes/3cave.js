@@ -1,7 +1,7 @@
 const nextButtons = document.querySelectorAll("next");
 pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Calm.mp3');
+bgm =new Audio('../sfx/Cave.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
@@ -10,9 +10,10 @@ pikmin = new Audio('../sfx/pikmin.mp3');
 
 const NextText= [
     "",
-    "The water trickled softly, a comforting sound for your little ears.",
-    "You jumped from a grey, olden rock, landing onto a another solid one surrounded by the eddying river water.",
-    "Up ahead, a dark cavern yawns, water flowing into its mouth.",
+    "The sounds of the pikmin who stayed behind start to fade as you venture in deeper and deeper.",
+    "Crystals of different colors and sizes are scattered among the floor and the walls.",
+    "Distracted from the shiny crystals, you trip over to what seems like a big rock.",
+    "A big rock that seems to be…breathing?"
 
 ]
 
@@ -61,6 +62,6 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        setTimeout(()=>{window.location.href = "../choices/choice3b.html"},2000);
+        setTimeout(()=>{window.location.href = "endingCave.html"},2000);
     }
 });

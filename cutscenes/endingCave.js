@@ -1,19 +1,20 @@
 const nextButtons = document.querySelectorAll("next");
-pop = new Audio('../sfx/pop.mp3')
+const pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Calm.mp3');
+const bgm =new Audio('../sfx/Bad2.mp3');
 bgm.currentTime = 0;
 bgm.play();
-bgm.volume = 0.5;
+bgm.volume = 1;
 
-pikmin = new Audio('../sfx/pikmin.mp3');
+const pikmin = new Audio('../sfx/burn4.mp3');
+pikmin.play();
+const pikmin2 = new Audio("../sfx/cry4.mp3")
 
 const NextText= [
     "",
-    "The water trickled softly, a comforting sound for your little ears.",
-    "You jumped from a grey, olden rock, landing onto a another solid one surrounded by the eddying river water.",
-    "Up ahead, a dark cavern yawns, water flowing into its mouth.",
-
+    "You barely have time to scream before he leaps onto you",
+    "In one big bite, he swallows you.",
+    "Goodbye, pikmin..."
 ]
 
 let i = 0
@@ -27,6 +28,7 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
+        pikmin2.play();
 
         if (i < NextText.length-1) {
 
@@ -34,7 +36,7 @@ document.addEventListener('click', function(justDie) {
                 out.classList.add('dialogue');
                 out.id="dialogue"
 
-                out.innerHTML=`<div class="viewBox">
+                out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                     ${NextText[i]}
                                     <button class="next" id="next">Next</button>  
                                 </div>`
@@ -47,7 +49,7 @@ document.addEventListener('click', function(justDie) {
             out.classList.add('dialogue');
             out.id="dialogue"
 
-            out.innerHTML=`<div class="viewBox">
+            out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                 ${NextText[i]}
                                 <button class="done" id="done">Done</button>  
                             </div>`
@@ -61,6 +63,12 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        setTimeout(()=>{window.location.href = "../choices/choice3b.html"},2000);
+
+        const die = document.createElement('div')
+        die.classList.add('die');
+        die.id="die";
+        die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
+        document.body.appendChild(die);
+        pikmin.pause();
     }
 });

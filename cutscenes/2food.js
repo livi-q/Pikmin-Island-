@@ -1,7 +1,7 @@
 const nextButtons = document.querySelectorAll("next");
 pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Garden.mp3');
+bgm =new Audio('../sfx/Joy.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;

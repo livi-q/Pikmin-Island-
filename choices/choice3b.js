@@ -6,7 +6,8 @@ bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
 
-let pikmin = new Audio('../sfx/lookie.mp3');
+let pikmin = new Audio('../sfx/hm.mp3');
+let disable = true;
 
 const NextText= [
     "",
@@ -27,7 +28,8 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
-        pikmin.play();
+        disable? pikmin.play(): null;
+        disable = false
 
         if (i < NextText.length-1) {
 
@@ -70,11 +72,11 @@ document.addEventListener('click', function(justDie) {
 
         choice.innerHTML=`   
         <div class="choice" id = "choice">     
-            <a href="../cutscenes/#.html"><button id= a > A </button></a>
+            <a href="../cutscenes/3cave.html"><button id= a > A </button></a>
             <a href="../cutscenes/endingDrown.html"><button id = b > B </button></a>
 
             <div class="description" > Explore cave </div>
-            <div class="description"> Try to collect object </div>
+            <div class="description"> Collect object </div>
         </div>`
 
         document.body.appendChild(choice);
