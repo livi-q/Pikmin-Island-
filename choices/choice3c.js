@@ -71,8 +71,8 @@ document.addEventListener('click', function(justDie) {
 
         choice.innerHTML=`   
         <div class="choice" id = "choice">     
-            <a href="../cutscenes/endingNight.html"><button id= a > A </button></a>
-            <a href="../cutscenes/goodEnding.html"><button id = b > B </button></a>
+            <a href="../cutscenes/goodEnding.html"><button id= a > A </button></a>
+            <a href="../cutscenes/endingNight.html"><button id = b > B </button></a>
 
             <div class="description" > Follow them </div>
             <div class="description"> Go home </div>
