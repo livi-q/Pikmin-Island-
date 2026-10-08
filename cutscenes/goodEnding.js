@@ -1,18 +1,21 @@
 const nextButtons = document.querySelectorAll("next");
-pop = new Audio('../sfx/pop.mp3')
+const pop = new Audio('../sfx/pop.mp3')
 
-bgm =new Audio('../sfx/Joy.mp3');
+const bgm =new Audio('../sfx/Calm.mp3');
 bgm.currentTime = 0;
 bgm.play();
-bgm.volume = 0.5;
+bgm.volume = 1;
 
-pikmin = new Audio('../sfx/pikmin.mp3');
+const pikmin = new Audio('../sfx/drown1.mp3');
+pikmin.loop=true;
+pikmin.play();
 
 const NextText= [
     "",
-    "The forest is truly bountiful!",
-    "Dappled sunlight filters through the leaves overhead.",
-    "Around you, your friends celebrate, making the forest seem vibrant and filled with life.",
+    "Your friends greet you as you return from your daily expeditions.",
+    "The sun sets behind you, casting a warm glow around you.",
+    "You hurry inside as the nocturnal creatures begin to stir...",
+    "Goodnight, pikmin!"
 ]
 
 let i = 0
@@ -33,7 +36,7 @@ document.addEventListener('click', function(justDie) {
                 out.classList.add('dialogue');
                 out.id="dialogue"
 
-                out.innerHTML=`<div class="viewBox">
+                out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                     ${NextText[i]}
                                     <button class="next" id="next">Next</button>  
                                 </div>`
@@ -46,7 +49,7 @@ document.addEventListener('click', function(justDie) {
             out.classList.add('dialogue');
             out.id="dialogue"
 
-            out.innerHTML=`<div class="viewBox">
+            out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                 ${NextText[i]}
                                 <button class="done" id="done">Done</button>  
                             </div>`
@@ -60,6 +63,12 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        setTimeout(()=>{window.location.href = "../choices/choice3a.html"},2000);
+
+        const die = document.createElement('div')
+        die.classList.add('die');
+        die.id="die";
+        die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
+        document.body.appendChild(die);
+        pikmin.pause();
     }
 });
