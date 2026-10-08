@@ -1,19 +1,20 @@
 const nextButtons = document.querySelectorAll("next");
-const pop = new Audio('../sfx/pop.mp3')
+pop = new Audio('../sfx/pop.mp3')
 
-const bgm =new Audio('../sfx/cutscene.mp3');
+bgm =new Audio('../sfx/Garden.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
 
-let pikmin = new Audio('../sfx/lookie.mp3');
+pikmin = new Audio('../sfx/pikmin.mp3');
 
 const NextText= [
     "",
-    "The pikmin found food!! They could use your help.",
-    "But- wait-",
-    "Your friend thinks they see something in the water...",
-    "What do you do?"
+    "The forest is truly bountiful!",
+    "Dappled sunlight filters through the leaves overhead.",
+    "Around you, your friends celebrate, making the forest seem vibrant and filled with life.",
+    "After you and your friends help themselves to juicy treats, you are ready to move on.",
+    "What do you want to do?"
 ]
 
 let i = 0
@@ -27,7 +28,6 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
-        pikmin.play();
 
         if (i < NextText.length-1) {
 
@@ -41,7 +41,6 @@ document.addEventListener('click', function(justDie) {
                                 </div>`
 
                 document.body.appendChild(out);
-                
 
         } else {
 
@@ -63,22 +62,6 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-
-        const choice = document.createElement('div')
-        choice.classList.add('anim');
-        choice.id="anim"
-
-        choice.innerHTML=`   
-        <div class="choice" id = "choice">     
-            <a href="../cutscenes/endingDrown.html"><button id= a > A </button></a>
-            <a href="../cutscenes/2food.html"><button id = b > B </button></a>
-
-            <div class="description" > Go to water </div>
-            <div class="description"> Help with food </div>
-        </div>`
-
-        document.body.appendChild(choice);
-        console.log(choice)
+        setTimeout(()=>{window.location.href = "../choices/#"},2000);
     }
 });
-

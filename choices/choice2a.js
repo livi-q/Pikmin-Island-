@@ -10,7 +10,7 @@ let pikmin = new Audio('../sfx/lookie.mp3');
 
 const NextText= [
     "",
-    "You can help them carry it back to the colony.",
+    "You can help them carry some food back to the colony.",
     "Nearby, you can also hear the sound of a stream trickling.",
     "You can also explore a new area with the other pikmin!",
     "What do you do?"
@@ -71,7 +71,7 @@ document.addEventListener('click', function(justDie) {
         choice.innerHTML=`   
         <div class="choice" id = "choice">     
             <a href="../cutscenes/#.html"><button id= a > A </button></a>
-            <a href="../cutscenes/#.html"><button id = b > B </button></a>
+            <a href="../cutscenes/2food.html"><button id = b > B </button></a>
 
             <div class="description" > Explore stream </div>
             <div class="description"> Help with food </div>
