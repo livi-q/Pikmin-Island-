@@ -17,3 +17,4 @@ window.addEventListener('keydown', function() { //when it load fade in
     bgm.play();
 })
 
+

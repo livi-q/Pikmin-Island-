@@ -2,28 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First choice</title>
+    <title>Drowning</title>
 
     <!--Fonts Stylesheet-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pikmin/pikmin.ttf">
+    
     <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="choices.css">
+    <link rel="stylesheet" href="cutscene.css">
 </head>
 <body>
     <div class="load"id = "load"></div>
 
-    <img class= "BgImg" src="../bgs/beachAsk.png">
+    <img class= "BgImg" src="../bgs/drown.png">
     <div class="dialogue" id = 'dialogue'>
-        <div class="viewBox">
-            Look!
+        <div class="viewBox" style = 'color: red;'>
+            You fall into the deep water, the last of your air diminishing in your lungs as you desperately try to flail your arms upwards against the water.
             <button class="next" id="next">Next</button>  
         </div>
         
     </div>
 
     <script src="../main.js"></script>
-    <script src="choice2b.js"></script>
+    <script src="endingDrown.js"></script>
 </body>
 </html>

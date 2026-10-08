@@ -1,19 +1,20 @@
 const nextButtons = document.querySelectorAll("next");
 const pop = new Audio('../sfx/pop.mp3')
 
-const bgm =new Audio('../sfx/cutscene.mp3');
+const bgm =new Audio('../sfx/Bad.mp3');
 bgm.currentTime = 0;
 bgm.play();
-bgm.volume = 0.5;
+bgm.volume = 1;
 
-let pikmin = new Audio('../sfx/lookie.mp3');
+const pikmin = new Audio('../sfx/drown1.mp3');
+pikmin.loop=true;
+pikmin.play();
 
 const NextText= [
     "",
-    "The pikmin found food!! They could use your help.",
-    "But- wait-",
-    "Your friend thinks they see something in the water...",
-    "What do you do?"
+    "Your tiny arms are useless against the undercurrent pulling you away from the surface...",
+    "Your vision is going dark...",
+    "Goodbye, pikmin..."
 ]
 
 let i = 0
@@ -27,7 +28,6 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
-        pikmin.play();
 
         if (i < NextText.length-1) {
 
@@ -35,13 +35,12 @@ document.addEventListener('click', function(justDie) {
                 out.classList.add('dialogue');
                 out.id="dialogue"
 
-                out.innerHTML=`<div class="viewBox">
+                out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                     ${NextText[i]}
                                     <button class="next" id="next">Next</button>  
                                 </div>`
 
                 document.body.appendChild(out);
-                
 
         } else {
 
@@ -49,7 +48,7 @@ document.addEventListener('click', function(justDie) {
             out.classList.add('dialogue');
             out.id="dialogue"
 
-            out.innerHTML=`<div class="viewBox">
+            out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                 ${NextText[i]}
                                 <button class="done" id="done">Done</button>  
                             </div>`
@@ -64,21 +63,10 @@ document.addEventListener('click', function(justDie) {
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
 
-        const choice = document.createElement('div')
-        choice.classList.add('anim');
-        choice.id="anim"
-
-        choice.innerHTML=`   
-        <div class="choice" id = "choice">     
-            <a href="../cutscenes/endingDrown.html"><button id= a > A </button></a>
-            <a href="../cutscenes/#.html"><button id = b > B </button></a>
-
-            <div class="description" > Go to water </div>
-            <div class="description"> Help with food </div>
-        </div>`
-
-        document.body.appendChild(choice);
-        console.log(choice)
+        const die = document.createElement('div')
+        die.classList.add('die');
+        die.id="die";
+        die.innerHTML= `<a href="../home.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
+        document.body.appendChild(die);
     }
 });
-

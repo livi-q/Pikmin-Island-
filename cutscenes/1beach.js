@@ -61,7 +61,7 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-        setTimeout(()=>{window.location.href = "../choices/choice2b.html"},3000);
+        setTimeout(()=>{window.location.href = "../choices/choice2b.html"},2000);
         
     }
 });
