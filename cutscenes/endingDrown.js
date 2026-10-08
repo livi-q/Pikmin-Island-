@@ -66,7 +66,8 @@ document.addEventListener('click', function(justDie) {
         const die = document.createElement('div')
         die.classList.add('die');
         die.id="die";
-        die.innerHTML= `<a href="../home.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
+        die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
         document.body.appendChild(die);
+        pikmin.pause();
     }
 });
