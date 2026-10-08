@@ -1,20 +1,19 @@
 const nextButtons = document.querySelectorAll("next");
-const pop = new Audio('../sfx/pop.mp3')
+pop = new Audio('../sfx/pop.mp3')
 
-const bgm =new Audio('../sfx/cutscene.mp3');
+bgm =new Audio('../sfx/Chilly.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 0.5;
 
-let pikmin = new Audio('../sfx/hm.mp3');
-let disable = true;
+pikmin = new Audio('../sfx/pikmin.mp3');
 
 const NextText= [
-    "",
-    "These pikmin say they found some new areas!",
-    "They are bored want to go out and explore.",
-    "You think that the others will be fine carrying food on their own...",
-    "What do you do?"
+    "The branches of the trees sparkled, reflecting the sun creating a surreal atmosphere. ",
+    "The wind carried chilling promises , reminding you that you shouldn't stay out for long.",
+    "You tread through the cold environment, the cold piece of land seeming to span forever. ",
+    "You walk for what seems like hours, seeing the same places pass by over and over. ",
+    "It's so easy to get lost here!",
 ]
 
 let i = 0
@@ -28,8 +27,6 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
-        disable? pikmin.play(): null;
-        disable = false
 
         if (i < NextText.length-1) {
 
@@ -43,7 +40,6 @@ document.addEventListener('click', function(justDie) {
                                 </div>`
 
                 document.body.appendChild(out);
-                
 
         } else {
 
@@ -65,24 +61,6 @@ document.addEventListener('click', function(justDie) {
     if(btn){
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
-
-        const choice = document.createElement('div')
-        choice.classList.add('anim');
-        choice.id="anim"
-
-        choice.innerHTML=`   
-        <div class="choice" id = "choice" style = "grid-template-columns: auto auto auto; gap:0px;">     
-            <a href="../cutscenes/goodEnding.html"><button id= a > A </button></a>
-            <a href="../cutscenes/3cave.html"><button id = b > B </button></a>
-            <a href="../cutscenes/3north.html"><button id = c > C </button></a>
-
-            <div class="description" > Continue carrying </div>
-            <div class="description"> Explore cave </div>
-            <div class="description"> Head north </div>
-        </div>`
-
-        document.body.appendChild(choice);
-        console.log(choice)
+        setTimeout(()=>{window.location.href = "../choices/choice3c.html"},2000);
     }
 });
-

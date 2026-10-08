@@ -11,9 +11,8 @@ let disable = true;
 
 const NextText= [
     "",
-    "These pikmin say they found some new areas!",
-    "They are bored want to go out and explore.",
-    "You think that the others will be fine carrying food on their own...",
+    "This must be their home!",
+    "They're telling you to follow them!",
     "What do you do?"
 ]
 
@@ -71,14 +70,12 @@ document.addEventListener('click', function(justDie) {
         choice.id="anim"
 
         choice.innerHTML=`   
-        <div class="choice" id = "choice" style = "grid-template-columns: auto auto auto; gap:0px;">     
-            <a href="../cutscenes/goodEnding.html"><button id= a > A </button></a>
-            <a href="../cutscenes/3cave.html"><button id = b > B </button></a>
-            <a href="../cutscenes/3north.html"><button id = c > C </button></a>
+        <div class="choice" id = "choice">     
+            <a href="../cutscenes/endingNight.html"><button id= a > A </button></a>
+            <a href="../cutscenes/goodEnding.html"><button id = b > B </button></a>
 
-            <div class="description" > Continue carrying </div>
-            <div class="description"> Explore cave </div>
-            <div class="description"> Head north </div>
+            <div class="description" > Follow them </div>
+            <div class="description"> Go home </div>
         </div>`
 
         document.body.appendChild(choice);

@@ -1,20 +1,22 @@
 const nextButtons = document.querySelectorAll("next");
 const pop = new Audio('../sfx/pop.mp3')
 
-const bgm =new Audio('../sfx/cutscene.mp3');
+const bgm =new Audio('../sfx/Bad2.mp3');
 bgm.currentTime = 0;
 bgm.play();
-bgm.volume = 0.5;
+bgm.volume = 1;
 
-let pikmin = new Audio('../sfx/hm.mp3');
-let disable = true;
+const pikmin = new Audio('../sfx/burn4.mp3');
+pikmin.play();
+const pikmin2 = new Audio("../sfx/cry4.mp3")
 
 const NextText= [
     "",
-    "These pikmin say they found some new areas!",
-    "They are bored want to go out and explore.",
-    "You think that the others will be fine carrying food on their own...",
-    "What do you do?"
+    "Could it be the... Beast everyone was so scared of...?",
+    "You stare into the cold pitch black, gazing around you for whoever or whatever made that noise.",
+    "A pair of glowing red eyes, staring back at you from a bush.",
+    "Before you even could react, it leapt onto you, eating you whole.",
+    "Goodbye, pikmin..."
 ]
 
 let i = 0
@@ -28,8 +30,7 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
-        disable? pikmin.play(): null;
-        disable = false
+        pikmin2.play();
 
         if (i < NextText.length-1) {
 
@@ -37,13 +38,12 @@ document.addEventListener('click', function(justDie) {
                 out.classList.add('dialogue');
                 out.id="dialogue"
 
-                out.innerHTML=`<div class="viewBox">
+                out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                     ${NextText[i]}
                                     <button class="next" id="next">Next</button>  
                                 </div>`
 
                 document.body.appendChild(out);
-                
 
         } else {
 
@@ -51,7 +51,7 @@ document.addEventListener('click', function(justDie) {
             out.classList.add('dialogue');
             out.id="dialogue"
 
-            out.innerHTML=`<div class="viewBox">
+            out.innerHTML=`<div class="viewBox" style = 'color: red;'>
                                 ${NextText[i]}
                                 <button class="done" id="done">Done</button>  
                             </div>`
@@ -66,23 +66,11 @@ document.addEventListener('click', function(justDie) {
         const old = document.getElementById("dialogue")
         if(old){old.remove()}
 
-        const choice = document.createElement('div')
-        choice.classList.add('anim');
-        choice.id="anim"
-
-        choice.innerHTML=`   
-        <div class="choice" id = "choice" style = "grid-template-columns: auto auto auto; gap:0px;">     
-            <a href="../cutscenes/goodEnding.html"><button id= a > A </button></a>
-            <a href="../cutscenes/3cave.html"><button id = b > B </button></a>
-            <a href="../cutscenes/3north.html"><button id = c > C </button></a>
-
-            <div class="description" > Continue carrying </div>
-            <div class="description"> Explore cave </div>
-            <div class="description"> Head north </div>
-        </div>`
-
-        document.body.appendChild(choice);
-        console.log(choice)
+        const die = document.createElement('div')
+        die.classList.add('die');
+        die.id="die";
+        die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
+        document.body.appendChild(die);
+        pikmin.pause();
     }
 });
-
