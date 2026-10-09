@@ -69,6 +69,7 @@ document.addEventListener('click', function(justDie) {
         die.classList.add('die');
         die.id="die";
         die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">Good job! \n [Play Again?]</a>`
+        die.style = "background: #d3af37"
         document.body.appendChild(die);
         pikmin.pause();
     }

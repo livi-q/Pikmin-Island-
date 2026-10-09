@@ -75,7 +75,7 @@ document.addEventListener('click', function(justDie) {
             <a href="../cutscenes/endingNight.html"><button id = b > B </button></a>
 
             <div class="description" > Follow them </div>
-            <div class="description"> Go home </div>
+            <div class="description"> Find your own path home</div>
         </div>`
 
         document.body.appendChild(choice);

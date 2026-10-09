@@ -1,7 +1,7 @@
 const nextButtons = document.querySelectorAll("next");
 const pop = new Audio('../sfx/pop.mp3')
 
-const bgm =new Audio('../sfx/Bad2.mp3');
+const bgm =new Audio('../sfx/Bad.mp3');
 bgm.currentTime = 0;
 bgm.play();
 bgm.volume = 1;
@@ -30,7 +30,7 @@ document.addEventListener('click', function(justDie) {
         if(old){old.remove()}
         console.log(i)
         pop.play();
-        pikmin2.play();
+        
 
         if (i < NextText.length-1) {
 
@@ -71,6 +71,8 @@ document.addEventListener('click', function(justDie) {
         die.id="die";
         die.innerHTML= `<a href="../index.html" style="font-size: x-large; color: antiquewhite;">[Try Again?]</a>`
         document.body.appendChild(die);
-        pikmin.pause();
+        pikmin.play();
+        pikmin2.play();
+        
     }
 });
