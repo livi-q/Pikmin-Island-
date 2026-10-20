@@ -10,8 +10,8 @@ pikmin = new Audio('../sfx/pikmin.mp3');
 
 const NextText= [
     "",
-    "The water trickled softly, a comforting sound for your little ears.",
-    "You jumped from a grey, olden rock, landing onto a another solid one surrounded by the eddying river water.",
+    "The water was loud, almost deafening for your little ears.",
+    "You jumped from a grey, olden rock– landing onto a another solid one surrounded by the crashing river water.",
     "Up ahead, a dark cavern yawns, water flowing into its mouth.",
 
 ]
